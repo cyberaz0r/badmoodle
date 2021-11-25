@@ -91,11 +91,15 @@ def scrape(parent_url, sess, payload, verbose, check_mode=False):
 # inject payload inside Atto Editor element
 def inject(content, sess, payload, check_mode):
 	# initialize vars
-	sesskey = content.split('"sesskey":"')[1].split('"')[0]
-	pagehash = content.split('"pageHash":"')[1].split('"')[0]
-	contextid = content.split('"contextid":')[1].split(',')[0]
-	elementid = content.split('"elementid":"')[1].split('"')[0]
-	draftid = content.split('"itemid":')[1].split('}')[0]
+	try:
+		sesskey = content.split('"sesskey":"')[1].split('"')[0]
+		pagehash = content.split('"pageHash":"')[1].split('"')[0]
+		contextid = content.split('"contextid":')[1].split(',')[0]
+		elementid = content.split('"elementid":"')[1].split('"')[0]
+		draftid = content.split('"itemid":')[1].split('}')[0]
+	except IndexError:
+		print('[X] Error retrieving Atto Editor element')
+		return False
 	
 	# first request: initialize draft or restore previous
 	sess.post(

