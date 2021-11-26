@@ -197,6 +197,9 @@ if __name__ == '__main__':
 	sys.dont_write_bytecode = True
 	requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 	
+	# disclaimer
+	print('Legal disclaimer:\nUsage of badmoodle for attacking targets without prior mutual consent is illegal. It is the end user\'s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.\n')
+	
 	# update
 	if args.update:
 		try:
