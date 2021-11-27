@@ -134,7 +134,7 @@ def update_modules(verbose):
 	
 	# retrieve modules list using GitHub API
 	try:
-		modules_list = [x['url'] for x in json.loads(requests.get('https://api.github.com/repos/cyberaz0r/badmoodle/git/trees/master').text)['tree'] if x['path'] == 'vulns'][0]
+		modules_list = [x['url'] for x in json.loads(requests.get('https://api.github.com/repos/cyberaz0r/badmoodle/git/trees/main').text)['tree'] if x['path'] == 'vulns'][0]
 		modules_list = [x['path'] for x in json.loads(requests.get(modules_list).text)['tree'] if x['path'].endswith('.py')]
 	except:
 		print('[X] Update failed: error while retrieving online modules list\n')
