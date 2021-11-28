@@ -11,7 +11,7 @@ Once saved, on the next loading of the page that contains the draft the code wil
 This allows an attacker who already compromised an user's Moodle account to escalate into greater goals, such as compromising the user's machine by embedding exploit kits inside Moodle, making Moodle a threat actor for the user's total compromise.
 '''
 
-
+name = 'Atto Editor Stored XSS'
 enabled = True
 
 
@@ -204,7 +204,7 @@ def check(args, sess, version):
 	global base_url
 	
 	if args.auth is None:
-		print('[-] Vulnerability "{}" requires authentication, skipping...'.format(__name__.split('.', 1)[1]))
+		print('[-] Vulnerability "{}" requires authentication, skipping...'.format(name))
 		return False
 	
 	base_url = args.url

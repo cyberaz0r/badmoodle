@@ -49,6 +49,23 @@ def parse_args():
 	return parser.parse_args()
 
 
+def load_modules(verbose):
+	if verbose > 1:
+		print('[*] Loading community vulnerability modules')
+	
+	modules = [__import__('vulns.{}'.format(x[:-3]), fromlist=['vulns']) for x in os.listdir('vulns') if x.endswith('.py')]
+	for module in modules:
+		if verbose > 2:
+			print('[i] Importing module for vulnerability "{}"'.format(module.name))
+	
+	active_modules = [x for x in modules if x.enabled]
+	
+	if verbose > 1:
+		print('[+] Loaded {} modules ({} active)\n'.format(len(modules), len(active_modules)))
+	
+	return active_modules
+
+
 def authenticate(auth, url, sess):
 	username, password = auth.split(':', 1)
 	print('[*] Authenticating as "{}"'.format(username))
@@ -80,30 +97,30 @@ def check_official_vulnerabilities(version):
 		print('Link to advisory: {}'.format(vuln['link']))
 
 
-def check_community_vulnerabilities(args, sess, version):
+def check_community_vulnerabilities(modules, args, sess, version):
 	print('\n[*] Checking for community vulnerabilities from vulnerability modules')
 	vulnerabilities_found = []
 	
-	for module in active_modules:
-		print('\n[+] Executing module for vulnerability "{}"{}'.format(module, ('' if args.verbose > 1 else '\n')))
+	for module in modules:
+		print('\n[+] Executing module for vulnerability "{}"{}'.format(module.name, ('' if args.verbose > 1 else '\n')))
 		
 		# checking vulnerability
 		if args.verbose > 1:
-			print('[*] Checking if host is vulnerable to "{}" vulnerability\n'.format(module))
-		vulnerable = eval('{}.check(args, sess, version)'.format(module))
+			print('[*] Checking if host is vulnerable to "{}" vulnerability\n'.format(module.name))
+		vulnerable = module.check(args, sess, version)
 		
 		if vulnerable:
-			print('\n[+] Host vulnerable to "{}" vulnerablity!{}'.format(module, ('' if args.verbose > 1 else '\n')))
+			print('\n[+] Host vulnerable to "{}" vulnerablity!{}'.format(module.name, ('' if args.verbose > 1 else '\n')))
 			vulnerabilities_found.append(module)
 			
 			# exploiting vulnerability
 			if args.exploit:
 				if args.verbose > 1:
-					print('[+] Exploiting vulnerability "{}"\n'.format(module))
-				eval('{}.exploit(args, sess, version)'.format(module))
+					print('[+] Exploiting vulnerability "{}"\n'.format(module.name))
+				module.exploit(args, sess, version)
 		
 		else:
-			print('\n[-] Host not vulnerable to "{}" vulnerability'.format(module))
+			print('\n[-] Host not vulnerable to "{}" vulnerability'.format(module.name))
 	
 	print('\n[+] Scan completed\n')
 	
@@ -114,7 +131,33 @@ def check_community_vulnerabilities(args, sess, version):
 		print('[+] The scanned host is vulnerable to:\n{}'.format('\n'.join(vulnerabilities_found)))
 
 
-def main(args):
+def main():
+	# preliminary operations
+	print_logo()
+	args = parse_args()
+	
+	os.chdir(sys.path[0])
+	sys.dont_write_bytecode = True
+	requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+	
+	# disclaimer
+	print('Legal disclaimer:\nUsage of badmoodle for attacking targets without prior mutual consent is illegal. It is the end user\'s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.\n')
+	
+	# update
+	if args.update:
+		try:
+			update_vulnerability_database(args.verbose)
+		except:
+			print('[X] Update failed: error encountered while updating vulnerability database\n\n[X] Terminating badmoodle due to errors')
+			exit(1)
+		
+		if not update_modules(args.verbose):
+			print('\n[X] Terminating badmoodle due to errors')
+			exit(1)
+	
+	# loading modules
+	modules = load_modules(args.verbose)
+	
 	# initializing session
 	sess = requests.Session()
 	sess.verify = False
@@ -183,49 +226,10 @@ def main(args):
 	
 	# scanning for vulnerabilities
 	check_official_vulnerabilities(version)
-	check_community_vulnerabilities(args, sess, version)
+	check_community_vulnerabilities(modules, args, sess, version)
 	
 	print('\n[+] Exiting from badmoodle')
 
 
 if __name__ == '__main__':
-	# preliminary operations
-	print_logo()
-	args = parse_args()
-	
-	os.chdir(sys.path[0])
-	sys.dont_write_bytecode = True
-	requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
-	
-	# disclaimer
-	print('Legal disclaimer:\nUsage of badmoodle for attacking targets without prior mutual consent is illegal. It is the end user\'s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.\n')
-	
-	# update
-	if args.update:
-		try:
-			update_vulnerability_database(args.verbose)
-		except:
-			print('[X] Update failed: error encountered while updating vulnerability database\n\n[X] Terminating badmoodle due to errors')
-			exit(1)
-		
-		if not update_modules(args.verbose):
-			print('\n[X] Terminating badmoodle due to errors')
-			exit(1)
-	
-	# loading modules
-	if args.verbose > 1:
-		print('[*] Loading community vulnerability modules')
-	
-	modules = [x[:-3] for x in os.listdir('vulns') if x.endswith('.py')]
-	for module in modules:
-		if args.verbose > 2:
-			print('[i] Importing module for vulnerability "{}"'.format(module))
-		exec('from vulns import {}'.format(module))
-	
-	active_modules = [x for x in modules if eval('{}.enabled'.format(x))]
-	
-	if args.verbose > 1:
-		print('[+] Loaded {} modules ({} active)\n'.format(len(modules), len(active_modules)))
-	
-	# passing to main function
-	main(args)
+	main()

@@ -114,9 +114,11 @@ Adding a community vulnerability module is very simple: just create a .py file i
 
 badmoodle needs only 2 requirements to make your module work:
 
-* It must have a boolean variable `enabled`.
+* It must have a boolean variable `enabled` and a string variable `name`.
 
-  This boolean variable is used to determine wether badmoodle should run the module or not. This allows to enable or disable modules by simply editing this variable without removing it from the "vulns" folder.
+  The `enabled` boolean variable is used to determine wether badmoodle should run the module or not. This allows to enable or disable modules by simply editing this variable without removing it from the "vulns" folder.
+  
+  The `name` string variable is just the vulnerability name, that will be printed in the core.
 
 * It must have the functions `check(args, sess, version)` and `exploit(args, sess, version)`
   
@@ -140,7 +142,7 @@ MODULE_AUTHOR
 MODULE_DESCRIPTION
 '''
 
-
+name = 'VULNERABILITY_NAME'
 enabled = True
 
 
