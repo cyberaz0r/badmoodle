@@ -54,9 +54,9 @@ def load_modules(verbose):
 		print('[*] Loading community vulnerability modules')
 	
 	modules = [__import__('vulns.{}'.format(x[:-3]), fromlist=['vulns']) for x in os.listdir('vulns') if x.endswith('.py')]
-	for module in modules:
-		if verbose > 2:
-			print('[i] Importing module for vulnerability "{}"'.format(module.name))
+	
+	if verbose > 2:
+		print('\n'.join(['[i] Imported module for vulnerability "{}"'.format(x.name) for x in modules]))
 	
 	active_modules = [x for x in modules if x.enabled]
 	
@@ -111,7 +111,7 @@ def check_community_vulnerabilities(modules, args, sess, version):
 		
 		if vulnerable:
 			print('\n[+] Host vulnerable to "{}" vulnerablity!{}'.format(module.name, ('' if args.verbose > 1 else '\n')))
-			vulnerabilities_found.append(module)
+			vulnerabilities_found.append(module.name)
 			
 			# exploiting vulnerability
 			if args.exploit:
