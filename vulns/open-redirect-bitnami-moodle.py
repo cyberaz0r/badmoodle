@@ -19,6 +19,8 @@ import sys
 name = "Open Redirect via Host Header in Bitnami Moodle's Apache"
 enabled = True
 
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+
 def print_usage():
 	s='''
 Usage:
