@@ -39,7 +39,7 @@ def parse_versions(unparsed):
 	elmts = [x.split(', ') for x in unparsed.split('and')]
 	elmts = [y.replace('+','').replace(' only','').split('(')[0].strip() for x in elmts for y in x]
 	
-	if len(elmts) == 1 and elmts[0].startswith('all'):
+	if len(elmts) == 1 and elmts[0].lower().startswith('all'):
 		return [{'from':'0.0.0', 'to':'1.10.0'}]
 		
 	elmts += [x[2] for x in elmts if len(x.split('to')) > 2]
@@ -55,6 +55,11 @@ def parse_versions(unparsed):
 			if len(el.split('to')) > 2:
 				continue
 			res.append({'from':el.split(' to ')[0].replace('x','0'), 'to':el.split(' to ')[1].replace('x','99')})
+		
+		elif '-' in el:
+			if len(el.split('-')) > 2:
+				continue
+			res.append({'from':el.split('-')[0].replace('x','0'), 'to':el.split('-')[1].replace('x','99')})
 		
 		elif '<' in el:
 			if '=' in el:
