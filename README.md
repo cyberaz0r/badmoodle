@@ -77,9 +77,15 @@ Using badmoodle is also very simple. Once installed you can run it with the foll
 
 * `-l LEVEL`, `--level LEVEL`
 
-  Level of tests to perform (default: 1)
+  Level of tests to perform (default: 1):
 
-* `-v LEVEL`, `--verbose LEVEL`
+  * Level 1: simple version check by parsing 404 page (MAJOR.MINOR)
+
+  * Level 2: simple and specific version check by parsing 404 page and confronting pages hash (MAJOR.MINOR.PATCH)
+
+  * Level 3: all of the above and plugin/themes enumeration
+
+* `-v VERBOSITY`, `--verbose VERBOSITY`
 
   Verbosity level (default: 1)
 
@@ -128,6 +134,8 @@ badmoodle needs only 2 requirements to make your module work:
   
   If in check mode badmoodle will call only the `check` function to only determine whether the host is vulnerable or not, if in exploit mode badmoodle will also call the `exploit` function for exploiting the vulnerability.
 
+You are also free to include all the logging and output functions you need by using `from utils.output import *`  for colored output functions and `from utils.logging import *` for logging functions.
+
 There follows a template for a badmoodle community vulnerability module:
 
 ```python
@@ -141,6 +149,10 @@ MODULE_AUTHOR
 @Description:
 MODULE_DESCRIPTION
 '''
+
+from utils.output import *
+from utils.logging import *
+
 
 name = 'VULNERABILITY_NAME'
 enabled = True
@@ -170,6 +182,15 @@ Pull requests with new community vulnerability modules are very welcome :)
 
 Also, if you want to report a bug, feel free to open an issue or contact me via mail at cyberaz0r@protonmail.com
 
+## To do
+Currently these are the features that are planned to be implemented in badmoodle:
+- [ ] Event logging
+- [ ] More granular version check
+- [ ] Multithreading mode (for instance for plugin/themes enumeration)
+- [ ] Getting vulnerabilities from snyk.io
+- [ ] Packaging (Makefile, PKGBUILD)
+- [ ] Releases for debian-based and arch-based distribution (.deb and .tar.xz packages)
+
 ## Credits
 badmoodle is coded by Michele 'cyberaz0r' Di Bonaventura.
 
@@ -177,3 +198,5 @@ A special thanks to Panfilo Salutari for the idea of the concept of the tool.
 
 Thanks to moodlescan (https://github.com/inc0d3/moodlescan) for the specific version check technique and its version database.
 
+## Changelog
+Changelog is available [here](CHANGELOG.md)

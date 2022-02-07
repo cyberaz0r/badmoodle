@@ -56,10 +56,10 @@ def openred(url, independent):
 		
 		if r.status_code == 403:
 			if independent:
-				msg = '\n\033[31;1m-> Error while checking vulnerability: WAF Detected\033[0m\n'
+				print('\n\033[31;1m-> Error while checking vulnerability: WAF Detected\033[0m\n')
 			else:
-				msg = '[-] Error while checking vulnerability "{}", WAF detected...'.format(name)
-			print(msg)
+				from utils.output import print_warning
+				print_warning('Error while checking vulnerability "{}", WAF detected...'.format(name))
 			return False
 		
 		if 'google.com' in r.headers["Location"]:	# if it's google.com, then it is vulnerable!
@@ -74,10 +74,10 @@ def openred(url, independent):
 				return False
 	except:
 		if independent:
-			msg = '\n\033[31;1m-> Some error occurred... check connection or argument\033[0m\n'
+			print('\n\033[31;1m-> Some error occurred... check connection or argument\033[0m\n')
 		else:
-			msg = '[-] An exception has been encountered while checking for the vulnerability "{}"'.format(name)
-		print(msg)
+			from utils.output import print_warning
+			print_warning('An exception has been encountered while checking for the vulnerability "{}"'.format(name))
 		return False
 
 def main(url):
@@ -87,7 +87,8 @@ def check(args, sess, version):
 	return openred(args.url, False)
 
 def exploit(args, sess, version):
-	print("[-] An Open Redirect via Host Header Vulnerability is exploitable only by conducting MITM attacks, skipping...")
+	from utils.output import print_warning
+	print_warning('An Open Redirect via Host Header Vulnerability is exploitable only by conducting MITM attacks, skipping...')
 	return
 
 if __name__ == '__main__':

@@ -1,5 +1,97 @@
 [
     {
+        "title": "MSA-22-0004: CSRF risk in badge alignment deletion",
+        "cves": [
+            "CVE-2022-0335"
+        ],
+        "versions": [
+            {
+                "from": "3.11",
+                "to": "3.11.4"
+            },
+            {
+                "from": "3.10",
+                "to": "3.10.8"
+            },
+            {
+                "from": "3.9",
+                "to": "3.9.11"
+            },
+            {
+                "from": "0.0.0",
+                "to": "3.9"
+            }
+        ],
+        "versions_affected": "3.11 to 3.11.4, 3.10 to 3.10.8, 3.9 to 3.9.11 and earlier unsupported versions",
+        "link": "https://moodle.org/security/index.php?o=3&p=0#p1734817"
+    },
+    {
+        "title": "MSA-22-0003: Capability gradereport/user:view not always respected when navigating to a user's course grade report",
+        "cves": [
+            "CVE-2022-0334"
+        ],
+        "versions": [
+            {
+                "from": "3.11",
+                "to": "3.11.4"
+            },
+            {
+                "from": "3.10",
+                "to": "3.10.8"
+            },
+            {
+                "from": "3.9",
+                "to": "3.9.11"
+            },
+            {
+                "from": "0.0.0",
+                "to": "3.9"
+            }
+        ],
+        "versions_affected": "3.11 to 3.11.4, 3.10 to 3.10.8, 3.9 to 3.9.11 and earlier unsupported versions",
+        "link": "https://moodle.org/security/index.php?o=3&p=0#p1734816"
+    },
+    {
+        "title": "MSA-22-0002: calendar:manageentries capability allows CRUD access to all calendar events",
+        "cves": [
+            "CVE-2022-0333"
+        ],
+        "versions": [
+            {
+                "from": "3.11",
+                "to": "3.11.4"
+            },
+            {
+                "from": "3.10",
+                "to": "3.10.8"
+            },
+            {
+                "from": "3.9",
+                "to": "3.9.11"
+            },
+            {
+                "from": "0.0.0",
+                "to": "3.9"
+            }
+        ],
+        "versions_affected": "3.11 to 3.11.4, 3.10 to 3.10.8, 3.9 to 3.9.11 and earlier unsupported versions",
+        "link": "https://moodle.org/security/index.php?o=3&p=0#p1734814"
+    },
+    {
+        "title": "MSA-22-0001: SQL injection risk in code fetching h5p activity user attempts",
+        "cves": [
+            "CVE-2022-0332"
+        ],
+        "versions": [
+            {
+                "from": "3.11",
+                "to": "3.11.4"
+            }
+        ],
+        "versions_affected": "3.11 to 3.11.4",
+        "link": "https://moodle.org/security/index.php?o=3&p=0#p1734813"
+    },
+    {
         "title": "MSA-21-0042: IDOR in a calendar web service allows fetching of other users' action events",
         "cves": [
             "CVE-2021-43560"
@@ -179,7 +271,7 @@
             }
         ],
         "versions_affected": "3.11 to 3.11.2, 3.10 to 3.10.6, 3.9 to 3.9.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=0#p1719328"
+        "link": "https://moodle.org/security/index.php?o=3&p=1#p1719328"
     },
     {
         "title": "MSA-21-0034: Authentication bypass risk when using external database authentication",
@@ -205,7 +297,7 @@
             }
         ],
         "versions_affected": "3.11 to 3.11.2, 3.10 to 3.10.6, 3.9 to 3.9.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=0#p1719327"
+        "link": "https://moodle.org/security/index.php?o=3&p=1#p1719327"
     },
     {
         "title": "MSA-21-0033: Course participants download did not restrict which users could be exported",
@@ -231,7 +323,7 @@
             }
         ],
         "versions_affected": "3.11 to 3.11.2, 3.10 to 3.10.6, 3.9 to 3.9.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=0#p1719326"
+        "link": "https://moodle.org/security/index.php?o=3&p=1#p1719326"
     },
     {
         "title": "MSA-21-0032: Session Hijack risk when Shibboleth authentication is enabled",
@@ -257,7 +349,7 @@
             }
         ],
         "versions_affected": "3.11 to 3.11.2, 3.10 to 3.10.6, 3.9 to 3.9.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=0#p1719325"
+        "link": "https://moodle.org/security/index.php?o=3&p=1#p1719325"
     },
     {
         "title": "MSA-21-0031: Messaging email notifications containing HTML may hide the final line of the email",
@@ -415,7 +507,7 @@
             }
         ],
         "versions_affected": "3.11, 3.10 to 3.10.4, 3.9 to 3.9.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=1#p1710822"
+        "link": "https://moodle.org/security/index.php?o=3&p=2#p1710822"
     },
     {
         "title": "MSA-21-0024: Blind SSRF possible against cURL blocked hosts via redirect",
@@ -441,7 +533,7 @@
             }
         ],
         "versions_affected": "3.11, 3.10 to 3.10.4, 3.9 to 3.9.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=1#p1710821"
+        "link": "https://moodle.org/security/index.php?o=3&p=2#p1710821"
     },
     {
         "title": "MSA-21-0023: Recursion denial of service possible due to recursive cURL in file repository",
@@ -467,7 +559,7 @@
             }
         ],
         "versions_affected": "3.11, 3.10 to 3.10.4, 3.9 to 3.9.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=1#p1710820"
+        "link": "https://moodle.org/security/index.php?o=3&p=2#p1710820"
     },
     {
         "title": "MSA-21-0022: Remote code execution risk when Shibboleth authentication is enabled",
@@ -493,7 +585,7 @@
             }
         ],
         "versions_affected": "3.11, 3.10 to 3.10.4, 3.9 to 3.9.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=1#p1710818"
+        "link": "https://moodle.org/security/index.php?o=3&p=2#p1710818"
     },
     {
         "title": "MSA-21-0021: SQL injection risk in code fetching recent courses",
@@ -667,7 +759,7 @@
             }
         ],
         "versions_affected": "3.10 to 3.10.3, 3.9 to 3.9.6, 3.8 to 3.8.8, 3.5 to 3.5.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=2#p1701633"
+        "link": "https://moodle.org/security/index.php?o=3&p=3#p1701633"
     },
     {
         "title": "MSA-21-0014: Blind SQL injection possible via MNet authentication",
@@ -697,7 +789,7 @@
             }
         ],
         "versions_affected": "3.10 to 3.10.3, 3.9 to 3.9.6, 3.8 to 3.8.8, 3.5 to 3.5.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=2#p1701632"
+        "link": "https://moodle.org/security/index.php?o=3&p=3#p1701632"
     },
     {
         "title": "MSA-21-0013: Quiz unreleased grade disclosure via web service",
@@ -727,7 +819,7 @@
             }
         ],
         "versions_affected": "3.10 to 3.10.3, 3.9 to 3.9.6, 3.8 to 3.8.8, 3.5 to 3.5.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=2#p1701631"
+        "link": "https://moodle.org/security/index.php?o=3&p=3#p1701631"
     },
     {
         "title": "MSA-21-0012: Forum CSV export could result in posts from all courses being exported",
@@ -749,7 +841,7 @@
             }
         ],
         "versions_affected": "3.10 to 3.10.3, 3.9 to 3.9.6 and 3.8 to 3.8.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=2#p1701629"
+        "link": "https://moodle.org/security/index.php?o=3&p=3#p1701629"
     },
     {
         "title": "MSA-21-0011: JQuery versions below 3.5.0 contain some potential vulnerabilities (upstream)",
@@ -960,7 +1052,7 @@
             }
         ],
         "versions_affected": "3.10, 3.9 to 3.9.3, 3.8 to 3.8.6, 3.5 to 3.5.15 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=3#p1680847"
+        "link": "https://moodle.org/security/index.php?o=3&p=4#p1680847"
     },
     {
         "title": "MSA-21-0004: Stored XSS possible via TeX notation filter",
@@ -990,7 +1082,7 @@
             }
         ],
         "versions_affected": "3.10, 3.9 to 3.9.3, 3.8 to 3.8.6, 3.5 to 3.5.15 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=3#p1680845"
+        "link": "https://moodle.org/security/index.php?o=3&p=4#p1680845"
     },
     {
         "title": "MSA-21-0003: Client side denial of service via personal message",
@@ -1020,7 +1112,7 @@
             }
         ],
         "versions_affected": "3.10, 3.9 to 3.9.3, 3.8 to 3.8.6, 3.5 to 3.5.15 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=3#p1680841"
+        "link": "https://moodle.org/security/index.php?o=3&p=4#p1680841"
     },
     {
         "title": "MSA-21-0002: Grade information disclosure in grade's external fetch functions",
@@ -1042,7 +1134,7 @@
             }
         ],
         "versions_affected": "3.10, 3.9 to 3.9.3, 3.8 to 3.8.6",
-        "link": "https://moodle.org/security/index.php?o=3&p=3#p1680839"
+        "link": "https://moodle.org/security/index.php?o=3&p=4#p1680839"
     },
     {
         "title": "MSA-21-0001: Search input template insufficiently escaped search queries",
@@ -1212,7 +1304,7 @@
             }
         ],
         "versions_affected": "3.9 to 3.9.2, 3.8 to 3.8.5, 3.7 to 3.7.8, 3.5 to 3.5.14 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=4#p1668770"
+        "link": "https://moodle.org/security/index.php?o=3&p=5#p1668770"
     },
     {
         "title": "MSA-20-0015: Chapter name in book not always escaped with forceclean enabled",
@@ -1234,7 +1326,7 @@
             }
         ],
         "versions_affected": "3.9 to 3.9.1, 3.8 to 3.8.4 and 3.7 to 3.7.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=4#p1657005"
+        "link": "https://moodle.org/security/index.php?o=3&p=5#p1657005"
     },
     {
         "title": "MSA-20-0014: Denial of service risk in file picker unzip functionality",
@@ -1264,7 +1356,7 @@
             }
         ],
         "versions_affected": "3.9 to 3.9.1, 3.8 to 3.8.4, 3.7 to 3.7.7, 3.5 to 3.5.13 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=4#p1657004"
+        "link": "https://moodle.org/security/index.php?o=3&p=5#p1657004"
     },
     {
         "title": "MSA-20-0013: \"Log in as\" capability in a course context may lead to some privilege escalation",
@@ -1294,7 +1386,7 @@
             }
         ],
         "versions_affected": "3.9 to 3.9.1, 3.8 to 3.8.4, 3.7 to 3.7.7, 3.5 to 3.5.13 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=4#p1657003"
+        "link": "https://moodle.org/security/index.php?o=3&p=5#p1657003"
     },
     {
         "title": "MSA-20-0012: Reflected XSS in tag manager",
@@ -1464,7 +1556,7 @@
             }
         ],
         "versions_affected": "3.8 to 3.8.2, 3.7 to 3.7.5, 3.6 to 3.6.9, 3.5 to 3.5.11 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=5#p1628593"
+        "link": "https://moodle.org/security/index.php?o=3&p=6#p1628593"
     },
     {
         "title": "MSA-20-0005: MathJax URL upgraded to later version to remove XSS risk (upstream)",
@@ -1494,7 +1586,7 @@
             }
         ],
         "versions_affected": "3.8 to 3.8.2, 3.7 to 3.7.5, 3.6 to 3.6.9, 3.5 to 3.5.11 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=5#p1628590"
+        "link": "https://moodle.org/security/index.php?o=3&p=6#p1628590"
     },
     {
         "title": "MSA-20-0004: Admin PHP unit webrunner tool requires additional input escaping",
@@ -1524,7 +1616,7 @@
             }
         ],
         "versions_affected": "3.8 to 3.8.1, 3.7 to 3.7.4, 3.6 to 3.6.8, 3.5 to 3.5.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=5#p1606856"
+        "link": "https://moodle.org/security/index.php?o=3&p=6#p1606856"
     },
     {
         "title": "MSA-20-0003: IP addresses can be spoofed using X-Forwarded-For",
@@ -1554,7 +1646,7 @@
             }
         ],
         "versions_affected": "3.8 to 3.8.1, 3.7 to 3.7.4, 3.6 to 3.6.8, 3.5 to 3.5.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=5#p1606855"
+        "link": "https://moodle.org/security/index.php?o=3&p=6#p1606855"
     },
     {
         "title": "MSA-20-0002: Grade history report does not respect Separate groups mode in the course settings",
@@ -1708,7 +1800,7 @@
             }
         ],
         "versions_affected": "3.7 to 3.7.2, 3.6 to 3.6.6, 3.5 to 3.5.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=6#p1586744"
+        "link": "https://moodle.org/security/index.php?o=3&p=7#p1586744"
     },
     {
         "title": "MSA-19-0024: Assigned Role in Cohort did not un-assign on removal",
@@ -1734,7 +1826,7 @@
             }
         ],
         "versions_affected": "3.7 to 3.7.2, 3.6 to 3.6.6, 3.5 to 3.5.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=6#p1586743"
+        "link": "https://moodle.org/security/index.php?o=3&p=7#p1586743"
     },
     {
         "title": "MSA-19-0023: Forum subscribe link contained an open redirect if forced subscription mode was enabled",
@@ -1760,7 +1852,7 @@
             }
         ],
         "versions_affected": "3.7 to 3.7.1, 3.6 to 3.6.5, 3.5 to 3.5.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=6#p1576215"
+        "link": "https://moodle.org/security/index.php?o=3&p=7#p1576215"
     },
     {
         "title": "MSA-19-0022: Open redirect in the mobile launch endpoint could be used to expose mobile access tokens",
@@ -1786,7 +1878,7 @@
             }
         ],
         "versions_affected": "3.7 to 3.7.1, 3.6 to 3.6.5, 3.5 to 3.5.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=6#p1576214"
+        "link": "https://moodle.org/security/index.php?o=3&p=7#p1576214"
     },
     {
         "title": "MSA-19-0021: Activity :addinstance capabilities were not respected when creating a course in single activity format",
@@ -1968,7 +2060,7 @@
             }
         ],
         "versions_affected": "3.7, 3.6 to 3.6.4, 3.5 to 3.5.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=7#p1566331"
+        "link": "https://moodle.org/security/index.php?o=3&p=8#p1566331"
     },
     {
         "title": "MSA-19-0014: Ability to delete glossary entries that belong to another glossary",
@@ -1994,7 +2086,7 @@
             }
         ],
         "versions_affected": "3.7, 3.6 to 3.6.4, 3.5 to 3.5.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=7#p1566330"
+        "link": "https://moodle.org/security/index.php?o=3&p=8#p1566330"
     },
     {
         "title": "MSA-19-0013: Missing sesskey (CSRF) token in loading/unloading XML files",
@@ -2020,7 +2112,7 @@
             }
         ],
         "versions_affected": "3.7, 3.6 to 3.6.4, 3.5 to 3.5.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=7#p1566329"
+        "link": "https://moodle.org/security/index.php?o=3&p=8#p1566329"
     },
     {
         "title": "MSA-19-0012: Private files uploaded via incoming mail processing could bypass quota restrictions",
@@ -2050,7 +2142,7 @@
             }
         ],
         "versions_affected": "3.6 to 3.6.3, 3.5 to 3.5.5, 3.4 to 3.4.8, 3.1 to 3.1.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=7#p1557998"
+        "link": "https://moodle.org/security/index.php?o=3&p=8#p1557998"
     },
     {
         "title": "MSA-19-0011: Open redirect in upload cohorts page",
@@ -2204,7 +2296,7 @@
             }
         ],
         "versions_affected": "3.6 to 3.6.2, 3.5 to 3.5.4 and 3.4 to 3.4.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=8#p1547743"
+        "link": "https://moodle.org/security/index.php?o=3&p=9#p1547743"
     },
     {
         "title": "MSA-19-0004: \"Log in as\" functionality exposed to JavaScript risk on other users' Dashboards",
@@ -2234,7 +2326,7 @@
             }
         ],
         "versions_affected": "3.6 to 3.6.2, 3.5 to 3.5.4, 3.4 to 3.4.7, 3.1 to 3.1.16 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=8#p1547742"
+        "link": "https://moodle.org/security/index.php?o=3&p=9#p1547742"
     },
     {
         "title": "MSA-19-0003: User full name is not escaped in the un-linked userpix page",
@@ -2264,7 +2356,7 @@
             }
         ],
         "versions_affected": "3.6 to 3.6.1, 3.5 to 3.5.3, 3.4 to 3.4.6, 3.1 to 3.1.15 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=8#p1536767"
+        "link": "https://moodle.org/security/index.php?o=3&p=9#p1536767"
     },
     {
         "title": "MSA-19-0002: Blind SSRF Risk in /badges/mybackpack.php",
@@ -2282,7 +2374,7 @@
             }
         ],
         "versions_affected": "3.1 to 3.1.15 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=8#p1536766"
+        "link": "https://moodle.org/security/index.php?o=3&p=9#p1536766"
     },
     {
         "title": "MSA-19-0001: Manage groups capability is missing XSS risk flag",
@@ -2492,7 +2584,7 @@
             }
         ],
         "versions_affected": "3.5, 3.4 to 3.4.3, 3.3 to 3.3.6, 3.2 to 3.2.9, 3.1 to 3.1.12 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=9#p1505293"
+        "link": "https://moodle.org/security/index.php?o=3&p=10#p1505293"
     },
     {
         "title": "MSA-18-0014: Privacy data exports include log data",
@@ -2514,7 +2606,7 @@
             }
         ],
         "versions_affected": "3.5, 3.4.3, 3.3 to 3.3.6",
-        "link": "https://moodle.org/security/index.php?o=3&p=9#p1505292"
+        "link": "https://moodle.org/security/index.php?o=3&p=10#p1505292"
     },
     {
         "title": "MSA-18-0012: Portfolio script allows instantiation of class chosen by user",
@@ -2544,7 +2636,7 @@
             }
         ],
         "versions_affected": "3.4 to 3.4.2, 3.3 to 3.3.5, 3.2 to 3.2.8, 3.1 to 3.1.11 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=9#p1496358"
+        "link": "https://moodle.org/security/index.php?o=3&p=10#p1496358"
     },
     {
         "title": "MSA-18-0011: User who did not agree to the site policies can see the site homepage as if they had full site access",
@@ -2574,7 +2666,7 @@
             }
         ],
         "versions_affected": "3.4 to 3.4.2, 3.3 to 3.3.5, 3.2 to 3.2.8, 3.1 to 3.1.11 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=9#p1496357"
+        "link": "https://moodle.org/security/index.php?o=3&p=10#p1496357"
     },
     {
         "title": "MSA-18-0010: User can shift a block from Dashboard to any page",
@@ -2768,7 +2860,7 @@
             }
         ],
         "versions_affected": "3.3 to 3.3.3, 3.2 to 3.2.6, 3.1 to 3.1.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=10#p1469494"
+        "link": "https://moodle.org/security/index.php?o=3&p=11#p1469494"
     },
     {
         "title": "MSA-18-0003: Privilege escalation in quiz web services",
@@ -2794,7 +2886,7 @@
             }
         ],
         "versions_affected": "3.4, 3.3 to 3.3.3, 3.2 to 3.2.6 and 3.1 to 3.1.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=10#p1469492"
+        "link": "https://moodle.org/security/index.php?o=3&p=11#p1469492"
     },
     {
         "title": "MSA-18-0002: Setting for blocked hosts list can be bypassed with multiple A record hostnames",
@@ -2816,7 +2908,7 @@
             }
         ],
         "versions_affected": "3.4, 3.3 to 3.3.3 and 3.2 to 3.2.6",
-        "link": "https://moodle.org/security/index.php?o=3&p=10#p1469491"
+        "link": "https://moodle.org/security/index.php?o=3&p=11#p1469491"
     },
     {
         "title": "MSA-18-0001: Server Side Request Forgery in the filepicker",
@@ -2846,7 +2938,7 @@
             }
         ],
         "versions_affected": "3.4, 3.3 to 3.3.3, 3.2 to 3.2.6, 3.1 to 3.1.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=10#p1469490"
+        "link": "https://moodle.org/security/index.php?o=3&p=11#p1469490"
     },
     {
         "title": "MSA-17-0021: Students can find out email addresses of other students in the same course",
@@ -3028,7 +3120,7 @@
             }
         ],
         "versions_affected": "3.3, 3.2 to 3.2.3, 3.1 to 3.1.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=11#p1434236"
+        "link": "https://moodle.org/security/index.php?o=3&p=12#p1434236"
     },
     {
         "title": "MSA-17-0014: Course overview block reveals activities in hidden courses",
@@ -3042,7 +3134,7 @@
             }
         ],
         "versions_affected": "3.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=11#p1434235"
+        "link": "https://moodle.org/security/index.php?o=3&p=12#p1434235"
     },
     {
         "title": "MSA-17-0006: User fullname disclosure on user preferences page",
@@ -3068,7 +3160,7 @@
             }
         ],
         "versions_affected": "3.3, 3.2 to 3.2.3, 3.1 to 3.1.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=11#p1434234"
+        "link": "https://moodle.org/security/index.php?o=3&p=12#p1434234"
     },
     {
         "title": "MSA-17-0013: Missing permission check when adding forum post attachments in Web Services",
@@ -3086,7 +3178,7 @@
             }
         ],
         "versions_affected": "3.2 to 3.2.2 and 3.1 to 3.1.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=11#p1421790"
+        "link": "https://moodle.org/security/index.php?o=3&p=12#p1421790"
     },
     {
         "title": "MSA-17-0012: CSRF in number of courses displayed in the course overview block",
@@ -3256,7 +3348,7 @@
             }
         ],
         "versions_affected": "3.2 to 3.2.1, 3.1 to 3.1.4, 3.0 to 3.0.8, 2.7.0 to 2.7.18 and other unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=12#p1409805"
+        "link": "https://moodle.org/security/index.php?o=3&p=13#p1409805"
     },
     {
         "title": "MSA-17-0004: XSS in assignment submission page",
@@ -3274,7 +3366,7 @@
             }
         ],
         "versions_affected": "3.2 and 3.1 to 3.1.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=12#p1395034"
+        "link": "https://moodle.org/security/index.php?o=3&p=13#p1395034"
     },
     {
         "title": "MSA-17-0003: PHPMailer vulnerability in no-reply address",
@@ -3312,7 +3404,7 @@
             }
         ],
         "versions_affected": "3.2, 3.1 to 3.1.3, 3.0 to 3.0.7, 2.9 to 2.9.9, 2.8 to 2.8.12, 2.7 to 2.7.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=12#p1395033"
+        "link": "https://moodle.org/security/index.php?o=3&p=13#p1395033"
     },
     {
         "title": "MSA-17-0002: Incorrect sanitation of attributes in forums",
@@ -3350,7 +3442,7 @@
             }
         ],
         "versions_affected": "3.2, 3.1 to 3.1.3, 3.0 to 3.0.7, 2.9 to 2.9.9, 2.8 to 2.8.12, 2.7 to 2.7.17 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=12#p1395031"
+        "link": "https://moodle.org/security/index.php?o=3&p=13#p1395031"
     },
     {
         "title": "MSA-17-0001: System file inclusion when adding own preset file in Boost theme",
@@ -3548,7 +3640,7 @@
             }
         ],
         "versions_affected": "3.1, 3.0 to 3.0.4, 2.9 to 2.9.6, 2.8 to 2.8.12",
-        "link": "https://moodle.org/security/index.php?o=3&p=13#p1356861"
+        "link": "https://moodle.org/security/index.php?o=3&p=14#p1356861"
     },
     {
         "title": "MSA-16-0020: Text injection in email headers",
@@ -3582,7 +3674,7 @@
             }
         ],
         "versions_affected": "3.1, 3.0 to 3.0.4, 2.9 to 2.9.6, 2.8 to 2.8.12, 2.7 to 2.7.14 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=13#p1356859"
+        "link": "https://moodle.org/security/index.php?o=3&p=14#p1356859"
     },
     {
         "title": "MSA-16-0019: Glossary search displays entries without checking user permissions to view them",
@@ -3596,7 +3688,7 @@
             }
         ],
         "versions_affected": "3.1",
-        "link": "https://moodle.org/security/index.php?o=3&p=13#p1356855"
+        "link": "https://moodle.org/security/index.php?o=3&p=14#p1356855"
     },
     {
         "title": "MSA-16-0018: CSRF in script marking forum posts as read",
@@ -3626,7 +3718,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.3, 2.9 to 2.9.5, 2.8 to 2.8.11, 2.7 to 2.7.13 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=13#p1342309"
+        "link": "https://moodle.org/security/index.php?o=3&p=14#p1342309"
     },
     {
         "title": "MSA-16-0017: Course idnumber not protected from teacher restore",
@@ -3798,7 +3890,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.2, 2.9 to 2.9.4, 2.8 to 2.8.10, 2.7 to 2.7.12 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=14#p1328651"
+        "link": "https://moodle.org/security/index.php?o=3&p=15#p1328651"
     },
     {
         "title": "MSA-16-0010: Enumeration of category details possible without authentication",
@@ -3828,7 +3920,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.2, 2.9 to 2.9.4, 2.8 to 2.8.10, 2.7 to 2.7.12 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=14#p1328650"
+        "link": "https://moodle.org/security/index.php?o=3&p=15#p1328650"
     },
     {
         "title": "MSA-16-0009: CSRF in Assignment plugin management page",
@@ -3858,7 +3950,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.2, 2.9 to 2.9.4, 2.8 to 2.8.10, 2.7 to 2.7.12 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=14#p1328649"
+        "link": "https://moodle.org/security/index.php?o=3&p=15#p1328649"
     },
     {
         "title": "MSA-16-0008: External function get_calendar_events return events that pertains to hidden activities",
@@ -3888,7 +3980,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.2, 2.9 to 2.9.4, 2.8 to 2.8.10, 2.7 to 2.7.12 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=14#p1328648"
+        "link": "https://moodle.org/security/index.php?o=3&p=15#p1328648"
     },
     {
         "title": "MSA-16-0007: Non-Editing Instructor role can edit exclude checkbox in Single View",
@@ -4074,7 +4166,7 @@
             }
         ],
         "versions_affected": "3.0 to 3.0.1, 2.9 to 2.9.3, 2.8 to 2.8.9, 2.7 to 2.7.11 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=15#p1311650"
+        "link": "https://moodle.org/security/index.php?o=3&p=16#p1311650"
     },
     {
         "title": "MSA-15-0046: Choice module closing date can be bypassed",
@@ -4100,7 +4192,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.2, 2.8 to 2.8.8, 2.7 to 2.7.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=15#p1297708"
+        "link": "https://moodle.org/security/index.php?o=3&p=16#p1297708"
     },
     {
         "title": "MSA-15-0045: SCORM module allows to bypass access restrictions based on date",
@@ -4126,7 +4218,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.2, 2.8 to 2.8.8, 2.7 to 2.7.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=15#p1297707"
+        "link": "https://moodle.org/security/index.php?o=3&p=16#p1297707"
     },
     {
         "title": "MSA-15-0044: Capability to view available badges is not respected",
@@ -4152,7 +4244,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.2, 2.8 to 2.8.8, 2.7 to 2.7.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=15#p1297706"
+        "link": "https://moodle.org/security/index.php?o=3&p=16#p1297706"
     },
     {
         "title": "MSA-15-0043: Web service core_enrol_get_enrolled_users does not respect course group mode",
@@ -4314,7 +4406,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.2",
-        "link": "https://moodle.org/security/index.php?o=3&p=16#p1297699"
+        "link": "https://moodle.org/security/index.php?o=3&p=17#p1297699"
     },
     {
         "title": "MSA-15-0036: XSS in grouping description",
@@ -4340,7 +4432,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.1, 2.8 to 2.8.7, 2.7 to 2.7.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=16#p1284957"
+        "link": "https://moodle.org/security/index.php?o=3&p=17#p1284957"
     },
     {
         "title": "MSA-15-0035: Rating component does not check separate groups",
@@ -4366,7 +4458,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.1, 2.8 to 2.8.7, 2.7 to 2.7.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=16#p1284956"
+        "link": "https://moodle.org/security/index.php?o=3&p=17#p1284956"
     },
     {
         "title": "MSA-15-0034: Vulnerability in password recovery mechanism",
@@ -4392,7 +4484,7 @@
             }
         ],
         "versions_affected": "2.9 to 2.9.1, 2.8 to 2.8.7, 2.7 to 2.7.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=16#p1284955"
+        "link": "https://moodle.org/security/index.php?o=3&p=17#p1284955"
     },
     {
         "title": "MSA-15-0033: Meta course synchronisation enrols suspended students as managers for a short period of time",
@@ -4554,7 +4646,7 @@
             }
         ],
         "versions_affected": "2.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=17#p1269037"
+        "link": "https://moodle.org/security/index.php?o=3&p=18#p1269037"
     },
     {
         "title": "MSA-15-0026: Possible phishing when redirecting to external site using referer header",
@@ -4580,7 +4672,7 @@
             }
         ],
         "versions_affected": "2.9, 2.8 to 2.8.6, 2.7 to 2.7.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=17#p1269036"
+        "link": "https://moodle.org/security/index.php?o=3&p=18#p1269036"
     },
     {
         "title": "MSA-15-0025: Capability to manage own files is not respected in Web Services",
@@ -4606,7 +4698,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.5, 2.7 to 2.7.7, 2.6 to 2.6.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=17#p1256091"
+        "link": "https://moodle.org/security/index.php?o=3&p=18#p1256091"
     },
     {
         "title": "MSA-15-0024: User with suspended enrolment can see sections in the navigation tree",
@@ -4632,7 +4724,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.5, 2.7 to 2.7.7, 2.6 to 2.6.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=17#p1256090"
+        "link": "https://moodle.org/security/index.php?o=3&p=18#p1256090"
     },
     {
         "title": "MSA-15-0023: Suspended user is able to login when confirming email",
@@ -4802,7 +4894,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.3, 2.7 to 2.7.5, 2.6 to 2.6.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=18#p1237905"
+        "link": "https://moodle.org/security/index.php?o=3&p=19#p1237905"
     },
     {
         "title": "MSA-15-0016: Web services token can be created for user with temporary password",
@@ -4828,7 +4920,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.3, 2.7 to 2.7.5, 2.6 to 2.6.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=18#p1237904"
+        "link": "https://moodle.org/security/index.php?o=3&p=19#p1237904"
     },
     {
         "title": "MSA-15-0015: User without proper permission is able to mark the tag as inappropriate",
@@ -4854,7 +4946,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.3, 2.7 to 2.7.5, 2.6 to 2.6.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=18#p1237903"
+        "link": "https://moodle.org/security/index.php?o=3&p=19#p1237903"
     },
     {
         "title": "MSA-15-0014: Potential information disclosure for the inaccessible courses",
@@ -4880,7 +4972,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.3, 2.7 to 2.7.5, 2.6 to 2.6.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=18#p1237902"
+        "link": "https://moodle.org/security/index.php?o=3&p=19#p1237902"
     },
     {
         "title": "MSA-15-0013: Block title not properly escaped and may cause HTML injection",
@@ -5067,7 +5159,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.1, 2.7 to 2.7.3, 2.6 to 2.6.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=19#p1196683"
+        "link": "https://moodle.org/security/index.php?o=3&p=20#p1196683"
     },
     {
         "title": "MSA-15-0006: Capability to grade Lesson module is missing XSS bitmask",
@@ -5081,7 +5173,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.1",
-        "link": "https://moodle.org/security/index.php?o=3&p=19#p1196682"
+        "link": "https://moodle.org/security/index.php?o=3&p=20#p1196682"
     },
     {
         "title": "MSA-15-0005: Insufficient access check in calendar functions in web-services",
@@ -5107,7 +5199,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.1, 2.7 to 2.7.3, 2.6 to 2.6.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=19#p1196681"
+        "link": "https://moodle.org/security/index.php?o=3&p=20#p1196681"
     },
     {
         "title": "MSA-15-0004: Information leak through messaging functions in web-services",
@@ -5133,7 +5225,7 @@
             }
         ],
         "versions_affected": "2.8 to 2.8.1, 2.7 to 2.7.3, 2.6 to 2.6.6 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=19#p1196680"
+        "link": "https://moodle.org/security/index.php?o=3&p=20#p1196680"
     },
     {
         "title": "MSA-15-0003: CSRF possible in Glossary module",
@@ -5315,7 +5407,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2, 2.6 to 2.6.5, 2.5 to 2.5.8 and earlier                   unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=20#p1182692"
+        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182692"
     },
     {
         "title": "MSA-14-0045: XSS file upload possible through web service",
@@ -5333,7 +5425,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2 and 2.6 to 2.6.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=20#p1182691"
+        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182691"
     },
     {
         "title": "MSA-14-0044: Hardware path disclosed in the error message",
@@ -5351,7 +5443,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2, 2.6 to 2.6.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=20#p1182690"
+        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182690"
     },
     {
         "title": "MSA-14-0043: Lack of group check in web service for Forum",
@@ -5369,7 +5461,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2, 2.6 to 2.6.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=20#p1182689"
+        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182689"
     },
     {
         "title": "MSA-14-0042: Lack of access check in IP lookup functionality",
@@ -5543,7 +5635,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2, 2.6 to 2.6.5, 2.5 to 2.5.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182672"
+        "link": "https://moodle.org/security/index.php?o=3&p=22#p1182672"
     },
     {
         "title": "MSA-14-0035: Headers not added to some AJAX scripts",
@@ -5569,7 +5661,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.2, 2.6 to 2.6.5, 2.5 to 2.5.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=21#p1182670"
+        "link": "https://moodle.org/security/index.php?o=3&p=22#p1182670"
     },
     {
         "title": "MSA-14-0034: Identity information revealed early in Q&A forum",
@@ -5595,7 +5687,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.1, 2.6 to 2.6.4, 2.5 to 2.5.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=21#p1162912"
+        "link": "https://moodle.org/security/index.php?o=3&p=22#p1162912"
     },
     {
         "title": "MSA-14-0033: URL parameter injection in CAS authentication",
@@ -5621,7 +5713,7 @@
             }
         ],
         "versions_affected": "2.7 to 2.7.1, 2.6 to 2.6.4, 2.5 to 2.5.7 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=21#p1162911"
+        "link": "https://moodle.org/security/index.php?o=3&p=22#p1162911"
     },
     {
         "title": "MSA-14-0032: Cross-site scripting in advanced grading methods",
@@ -5791,7 +5883,7 @@
             }
         ],
         "versions_affected": "2.7, 2.6 to 2.6.3, 2.5 to 2.5.6, 2.4 to 2.4.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=22#p1145404"
+        "link": "https://moodle.org/security/index.php?o=3&p=23#p1145404"
     },
     {
         "title": "MSA-14-0025: Remote code execution in Quiz",
@@ -5821,7 +5913,7 @@
             }
         ],
         "versions_affected": "2.7, 2.6 to 2.6.3, 2.5 to 2.5.6, 2.4 to 2.4.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=22#p1145403"
+        "link": "https://moodle.org/security/index.php?o=3&p=23#p1145403"
     },
     {
         "title": "MSA-14-0024: Cross-site scripting vulnerability in profile field",
@@ -5851,7 +5943,7 @@
             }
         ],
         "versions_affected": "2.7, 2.6 to 2.6.3, 2.5 to 2.5.6, 2.4 to 2.4.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=22#p1145402"
+        "link": "https://moodle.org/security/index.php?o=3&p=23#p1145402"
     },
     {
         "title": "MSA-14-0023: XML External Entity vulnerability in IMSCC and IMSCP",
@@ -5881,7 +5973,7 @@
             }
         ],
         "versions_affected": "2.7, 2.6 to 2.6.3, 2.5 to 2.5.6, 2.4 to 2.4.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=22#p1145401"
+        "link": "https://moodle.org/security/index.php?o=3&p=23#p1145401"
     },
     {
         "title": "MSA-14-0022: XML External Entity vulnerability in LTI module",
@@ -6055,7 +6147,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.2, 2.5 to 2.5.5, 2.4 to 2.4.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=23#p1128497"
+        "link": "https://moodle.org/security/index.php?o=3&p=24#p1128497"
     },
     {
         "title": "MSA-14-0015: Web service token expiry issue for MoodleMobile",
@@ -6081,7 +6173,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.2, 2.5 to 2.5.5, 2.4 to 2.4.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=23#p1128496"
+        "link": "https://moodle.org/security/index.php?o=3&p=24#p1128496"
     },
     {
         "title": "MSA-14-0014: Cross-site request forgery possible in Assignment",
@@ -6107,7 +6199,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.2, 2.5 to 2.5.5, 2.4 to 2.4.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=23#p1128495"
+        "link": "https://moodle.org/security/index.php?o=3&p=24#p1128495"
     },
     {
         "title": "MSA-14-0013: Unfiltered data used in Assignment web services",
@@ -6121,7 +6213,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.1",
-        "link": "https://moodle.org/security/index.php?o=3&p=23#p1112022"
+        "link": "https://moodle.org/security/index.php?o=3&p=24#p1112022"
     },
     {
         "title": "MSA-14-0012: Access issue in Badges",
@@ -6295,7 +6387,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.1, 2.5 to 2.5.4, 2.4 to 2.4.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=24#p1112015"
+        "link": "https://moodle.org/security/index.php?o=3&p=25#p1112015"
     },
     {
         "title": "MSA-14-0005: Access issue in Feedback activity",
@@ -6321,7 +6413,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.1, 2.5 to 2.5.4, 2.4 to 2.4.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=24#p1112014"
+        "link": "https://moodle.org/security/index.php?o=3&p=25#p1112014"
     },
     {
         "title": "MSA-14-0004: Incorrect filtering in Quiz",
@@ -6347,7 +6439,7 @@
             }
         ],
         "versions_affected": "2.6 to 2.6.1, 2.5 to 2.5.4, 2.4 to 2.4.8 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=24#p1112013"
+        "link": "https://moodle.org/security/index.php?o=3&p=25#p1112013"
     },
     {
         "title": "MSA-14-0003: Cross-site request forgery vulnerability in profile fields",
@@ -6377,7 +6469,7 @@
             }
         ],
         "versions_affected": "2.6, 2.5 to 2.5.4, 2.4 to 2.4.7, 2.3 to 2.3.10 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=24#p1094567"
+        "link": "https://moodle.org/security/index.php?o=3&p=25#p1094567"
     },
     {
         "title": "MSA-14-0002: Group constraints lacking in \"login as\"",
@@ -6555,7 +6647,7 @@
             }
         ],
         "versions_affected": "2.5 to 2.5.2, 2.4 to 2.4.6, 2.3 to 2.3.9 and earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=25#p1060005"
+        "link": "https://moodle.org/security/index.php?o=3&p=26#p1060005"
     },
     {
         "title": "MSA-13-0035: Inadequate filtering in Blog",
@@ -6581,7 +6673,7 @@
             }
         ],
         "versions_affected": "2.5 to 2.5.1, 2.4 to 2.4.5, 2.3 to 2.3.8, previous unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=25#p1035115"
+        "link": "https://moodle.org/security/index.php?o=3&p=26#p1035115"
     },
     {
         "title": "MSA-13-0034: Object injection through Badges",
@@ -6595,7 +6687,7 @@
             }
         ],
         "versions_affected": "2.5 to 2.5.1",
-        "link": "https://moodle.org/security/index.php?o=3&p=25#p1035113"
+        "link": "https://moodle.org/security/index.php?o=3&p=26#p1035113"
     },
     {
         "title": "MSA-13-0033: Potential SQL injection in Moodle's SQL Server driver",
@@ -6621,7 +6713,7 @@
             }
         ],
         "versions_affected": "2.5 to 2.5.1, 2.4 to 2.4.5, 2.3 to 2.3.8, previous unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=25#p1035112"
+        "link": "https://moodle.org/security/index.php?o=3&p=26#p1035112"
     },
     {
         "title": "MSA-13-0032: Host verification failure in Amazon S3 repository",
@@ -6811,7 +6903,7 @@
             }
         ],
         "versions_affected": "2.5, 2.4 to 2.4.4, 2.3 to 2.3.7, 2.2 to 2.2.10,\u00a0earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=26#p1009825"
+        "link": "https://moodle.org/security/index.php?o=3&p=27#p1009825"
     },
     {
         "title": "MSA-13-0025: XSS vulnerability in YUI library",
@@ -6841,7 +6933,7 @@
             }
         ],
         "versions_affected": "2.5, 2.4 to 2.4.4, 2.3 to 2.3.7, 2.2 to 2.2.10,\u00a0earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=26#p1009824"
+        "link": "https://moodle.org/security/index.php?o=3&p=27#p1009824"
     },
     {
         "title": "MSA-13-0024: Form filtering issue",
@@ -6867,7 +6959,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.3, 2.3 to 2.3.6, 2.2 to 2.2.9, earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=26#p994060"
+        "link": "https://moodle.org/security/index.php?o=3&p=27#p994060"
     },
     {
         "title": "MSA-13-0023: Permission issue in blog comments",
@@ -6893,7 +6985,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.3, 2.3 to 2.3.6, 2.2 to 2.2.9, earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=26#p994059"
+        "link": "https://moodle.org/security/index.php?o=3&p=27#p994059"
     },
     {
         "title": "MSA-13-0022: Information leak in hub registration",
@@ -7063,7 +7155,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.1, 2.3 to 2.3.4, 2.2 to 2.2.7, earlier unsupported versions (2.x only)",
-        "link": "https://moodle.org/security/index.php?o=3&p=27#p978388"
+        "link": "https://moodle.org/security/index.php?o=3&p=28#p978388"
     },
     {
         "title": "MSA-13-0015: Cross-site scripting issue in Filepicker",
@@ -7089,7 +7181,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.1, 2.3 to 2.3.4, 2.2 to 2.2.7, earlier unsupported versions (2.x only)",
-        "link": "https://moodle.org/security/index.php?o=3&p=27#p978386"
+        "link": "https://moodle.org/security/index.php?o=3&p=28#p978386"
     },
     {
         "title": "MSA-13-0014: Password revealed in WebDav repository",
@@ -7115,7 +7207,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.1, 2.3 to 2.3.4, 2.2 to 2.2.7, earlier unsupported versions (2.x only)",
-        "link": "https://moodle.org/security/index.php?o=3&p=27#p978385"
+        "link": "https://moodle.org/security/index.php?o=3&p=28#p978385"
     },
     {
         "title": "MSA-13-0013: Server information revealed through exception messages",
@@ -7141,7 +7233,7 @@
             }
         ],
         "versions_affected": "2.4 to 2.4.1, 2.3 to 2.3.4, 2.2 to 2.2.7, earlier unsupported versions",
-        "link": "https://moodle.org/security/index.php?o=3&p=27#p978384"
+        "link": "https://moodle.org/security/index.php?o=3&p=28#p978384"
     },
     {
         "title": "MSA-13-0012: Information leak in course profiles",
@@ -7283,7 +7375,7 @@
             }
         ],
         "versions_affected": "2.4, 2.3 to 2.3.3+",
-        "link": "https://moodle.org/security/index.php?o=3&p=28#p958398"
+        "link": "https://moodle.org/security/index.php?o=3&p=29#p958398"
     },
     {
         "title": "MSA-13-0005: Potential phishing attack through URL redirects",
@@ -7305,7 +7397,7 @@
             }
         ],
         "versions_affected": "2.4, 2.3 to 2.3.3+, 2.2 to 2.2.6+",
-        "link": "https://moodle.org/security/index.php?o=3&p=28#p958397"
+        "link": "https://moodle.org/security/index.php?o=3&p=29#p958397"
     },
     {
         "title": "MSA-13-0004: Information leak through activity report",
@@ -7327,7 +7419,7 @@
             }
         ],
         "versions_affected": "2.4, 2.3 to 2.3.3+, 2.2 to 2.2.6+",
-        "link": "https://moodle.org/security/index.php?o=3&p=28#p958396"
+        "link": "https://moodle.org/security/index.php?o=3&p=29#p958396"
     },
     {
         "title": "MSA-13-0003: Potential server file access through backup restoration",
@@ -7353,7 +7445,7 @@
             }
         ],
         "versions_affected": "2.4, 2.3 to 2.3.3+, 2.2 to 2.2.6+, 2.1 to 2.1.9+",
-        "link": "https://moodle.org/security/index.php?o=3&p=28#p958395"
+        "link": "https://moodle.org/security/index.php?o=3&p=29#p958395"
     },
     {
         "title": "MSA-13-0002: Capability issue with Outcome editing",
@@ -7507,7 +7599,7 @@
             }
         ],
         "versions_affected": "2.3 to 2.3.2+, 2.2 to 2.2.5+, 2.1 to 2.1.8+",
-        "link": "https://moodle.org/security/index.php?o=3&p=29#p941380"
+        "link": "https://moodle.org/security/index.php?o=3&p=30#p941380"
     },
     {
         "title": "MSA-12-0058: Possible form data manipulation issue",
@@ -7525,7 +7617,7 @@
             }
         ],
         "versions_affected": "2.3 to 2.3.2+, 2.2 to 2.2.5+",
-        "link": "https://moodle.org/security/index.php?o=3&p=29#p941379"
+        "link": "https://moodle.org/security/index.php?o=3&p=30#p941379"
     },
     {
         "title": "MSA-12-0057: Access issue through repository",
@@ -7547,7 +7639,7 @@
             }
         ],
         "versions_affected": "2.3 to 2.3.2+, 2.2 to 2.2.5+, 2.1 to 2.1.8+",
-        "link": "https://moodle.org/security/index.php?o=3&p=29#p941378"
+        "link": "https://moodle.org/security/index.php?o=3&p=30#p941378"
     },
     {
         "title": "MSA-12-0056: Information leak in drag-and-drop",
@@ -7561,7 +7653,7 @@
             }
         ],
         "versions_affected": "2.3 to 2.3.1+",
-        "link": "https://moodle.org/security/index.php?o=3&p=29#p922011"
+        "link": "https://moodle.org/security/index.php?o=3&p=30#p922011"
     },
     {
         "title": "MSA-12-0055: Web service access token issue",
@@ -7715,7 +7807,7 @@
             }
         ],
         "versions_affected": "2.3, 2.2 to 2.2.3+, 2.1 to 2.1.6+, 2.0 to 2.0.9+",
-        "link": "https://moodle.org/security/index.php?o=3&p=30#p903116"
+        "link": "https://moodle.org/security/index.php?o=3&p=31#p903116"
     },
     {
         "title": "MSA-12-0048: Possible XSS in cohort administration",
@@ -7741,7 +7833,7 @@
             }
         ],
         "versions_affected": "2.3, 2.2 to 2.2.3+, 2.1 to 2.1.6+, 2.0 to 2.0.9+",
-        "link": "https://moodle.org/security/index.php?o=3&p=30#p903115"
+        "link": "https://moodle.org/security/index.php?o=3&p=31#p903115"
     },
     {
         "title": "MSA-12-0047: SQL injection potential in Feedback module",
@@ -7763,7 +7855,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.3+, 2.1 to 2.1.6+, 2.0 to 2.0.9+",
-        "link": "https://moodle.org/security/index.php?o=3&p=30#p903113"
+        "link": "https://moodle.org/security/index.php?o=3&p=31#p903113"
     },
     {
         "title": "MSA-12-0046: Insecure protocol redirection in LDAP authentication",
@@ -7789,7 +7881,7 @@
             }
         ],
         "versions_affected": "2.3, 2.2 to 2.2.3+, 2.1 to 2.1.6+, 2.0 to 2.0.9+",
-        "link": "https://moodle.org/security/index.php?o=3&p=30#p903112"
+        "link": "https://moodle.org/security/index.php?o=3&p=31#p903112"
     },
     {
         "title": "MSA-12-0045: Injection potential in admin for repositories",
@@ -7911,7 +8003,7 @@
             }
         ],
         "versions_affected": "2.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=31#p903103"
+        "link": "https://moodle.org/security/index.php?o=3&p=32#p903103"
     },
     {
         "title": "MSA-12-0038: Calendar event write permission issue",
@@ -7937,7 +8029,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+, 2.0 to 2.0.8+, 1.9 to 1.9.17+",
-        "link": "https://moodle.org/security/index.php?o=3&p=31#p885828"
+        "link": "https://moodle.org/security/index.php?o=3&p=32#p885828"
     },
     {
         "title": "MSA-12-0037: Write access issue in Database activity module",
@@ -7955,7 +8047,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+",
-        "link": "https://moodle.org/security/index.php?o=3&p=31#p885827"
+        "link": "https://moodle.org/security/index.php?o=3&p=32#p885827"
     },
     {
         "title": "MSA-12-0036: Cross-site scripting vulnerability in category identifier",
@@ -7977,7 +8069,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+, 2.0 to 2.0.8+",
-        "link": "https://moodle.org/security/index.php?o=3&p=31#p885826"
+        "link": "https://moodle.org/security/index.php?o=3&p=32#p885826"
     },
     {
         "title": "MSA-12-0035: Cross-site scripting vulnerability in \"download all\"",
@@ -8115,7 +8207,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+, 2.0 to 2.0.8+",
-        "link": "https://moodle.org/security/index.php?o=3&p=32#p885816"
+        "link": "https://moodle.org/security/index.php?o=3&p=33#p885816"
     },
     {
         "title": "MSA-12-0028: Insecure authentication issue",
@@ -8133,7 +8225,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+",
-        "link": "https://moodle.org/security/index.php?o=3&p=32#p885815"
+        "link": "https://moodle.org/security/index.php?o=3&p=33#p885815"
     },
     {
         "title": "MSA-12-0027: Question bank capability issues",
@@ -8151,7 +8243,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+",
-        "link": "https://moodle.org/security/index.php?o=3&p=32#p885813"
+        "link": "https://moodle.org/security/index.php?o=3&p=33#p885813"
     },
     {
         "title": "MSA-12-0026: Quiz capability issue",
@@ -8169,7 +8261,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.2+, 2.1 to 2.1.5+",
-        "link": "https://moodle.org/security/index.php?o=3&p=32#p885812"
+        "link": "https://moodle.org/security/index.php?o=3&p=33#p885812"
     },
     {
         "title": "MSA-12-0025: Personal communication access issue",
@@ -8291,7 +8383,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.1+, 2.1 to 2.1.4+",
-        "link": "https://moodle.org/security/index.php?o=3&p=33#p865984"
+        "link": "https://moodle.org/security/index.php?o=3&p=34#p865984"
     },
     {
         "title": "MSA-12-0018: Course information leak in Gradebook export",
@@ -8309,7 +8401,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.1+, 2.1 to 2.1.4+",
-        "link": "https://moodle.org/security/index.php?o=3&p=33#p865983"
+        "link": "https://moodle.org/security/index.php?o=3&p=34#p865983"
     },
     {
         "title": "MSA-12-0017: Personal information leak issue",
@@ -8331,7 +8423,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.1+, 2.1 to 2.1.4+, 2.0 to 2.0.7+",
-        "link": "https://moodle.org/security/index.php?o=3&p=33#p865980"
+        "link": "https://moodle.org/security/index.php?o=3&p=34#p865980"
     },
     {
         "title": "MSA-12-0016: Default repository capabilities issue",
@@ -8353,7 +8445,7 @@
             }
         ],
         "versions_affected": "2.2 to 2.2.1+, 2.1 to 2.1.4+, 2.0 to 2.0.7+",
-        "link": "https://moodle.org/security/index.php?o=3&p=33#p865979"
+        "link": "https://moodle.org/security/index.php?o=3&p=34#p865979"
     },
     {
         "title": "MSA-12-0015: Backup and private files issue",
@@ -8499,7 +8591,7 @@
             }
         ],
         "versions_affected": "2.2, 2.1 to 2.1.3+ (earlier versions unaffected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=34#p845165"
+        "link": "https://moodle.org/security/index.php?o=3&p=35#p845165"
     },
     {
         "title": "MSA-12-0008: Unsynchronised access via tokens",
@@ -8521,7 +8613,7 @@
             }
         ],
         "versions_affected": "2.2, 2.1 to 2.1.3+, 2.0 to 2.0.6+ (1.9 not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=34#p845164"
+        "link": "https://moodle.org/security/index.php?o=3&p=35#p845164"
     },
     {
         "title": "MSA-12-0007: Email injection prevention",
@@ -8547,7 +8639,7 @@
             }
         ],
         "versions_affected": "2.2, 2.1 to 2.1.3+, 2.0 to 2.0.6+, 1.9 to 1.9.15+",
-        "link": "https://moodle.org/security/index.php?o=3&p=34#p845163"
+        "link": "https://moodle.org/security/index.php?o=3&p=35#p845163"
     },
     {
         "title": "MSA-12-0006: Additional email address validation",
@@ -8573,7 +8665,7 @@
             }
         ],
         "versions_affected": "2.2, 2.1 to 2.1.3+, 2.0 to 2.0.6+, 1.9 to 1.9.15+",
-        "link": "https://moodle.org/security/index.php?o=3&p=34#p845162"
+        "link": "https://moodle.org/security/index.php?o=3&p=35#p845162"
     },
     {
         "title": "MSA-12-0005: Encryption enhancement",
@@ -8731,7 +8823,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+, 2.0 to 2.0.5+ (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=35#p834322"
+        "link": "https://moodle.org/security/index.php?o=3&p=36#p834322"
     },
     {
         "title": "MSA-11-0052: Potential to exploit developer debugging scripts",
@@ -8749,7 +8841,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+, 2.0 to 2.0.5+ (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=35#p834320"
+        "link": "https://moodle.org/security/index.php?o=3&p=36#p834320"
     },
     {
         "title": "MSA-11-0051: Authentication issue with Web services",
@@ -8767,7 +8859,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+, 2.0 to 2.0.5+ (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=35#p834319"
+        "link": "https://moodle.org/security/index.php?o=3&p=36#p834319"
     },
     {
         "title": "MSA-11-0050: Backup capability issue",
@@ -8785,7 +8877,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+, 2.0 to 2.0.5+ (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=35#p834317"
+        "link": "https://moodle.org/security/index.php?o=3&p=36#p834317"
     },
     {
         "title": "MSA-11-0049: Network restriction ineffective with MNet",
@@ -8911,7 +9003,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+ (2.0.x, 1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=36#p834305"
+        "link": "https://moodle.org/security/index.php?o=3&p=37#p834305"
     },
     {
         "title": "MSA-11-0042: Information leak in Wiki",
@@ -8929,7 +9021,7 @@
             }
         ],
         "versions_affected": "2.1 to 2.1.2+, 2.0 to 2.0.5+ (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=36#p834304"
+        "link": "https://moodle.org/security/index.php?o=3&p=37#p834304"
     },
     {
         "title": "MSA-11-0041: Global search authentication issue",
@@ -8947,7 +9039,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=36#p819945"
+        "link": "https://moodle.org/security/index.php?o=3&p=37#p819945"
     },
     {
         "title": "MSA-11-0040: Potential personal information leak",
@@ -8969,7 +9061,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5, < 1.9.14",
-        "link": "https://moodle.org/security/index.php?o=3&p=36#p819943"
+        "link": "https://moodle.org/security/index.php?o=3&p=37#p819943"
     },
     {
         "title": "MSA-11-0039: Wiki section vulnerability",
@@ -9083,7 +9175,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=37#p819936"
+        "link": "https://moodle.org/security/index.php?o=3&p=38#p819936"
     },
     {
         "title": "MSA-11-0032: MNET SSL validation issue",
@@ -9105,7 +9197,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5, < 1.9.14",
-        "link": "https://moodle.org/security/index.php?o=3&p=37#p819935"
+        "link": "https://moodle.org/security/index.php?o=3&p=38#p819935"
     },
     {
         "title": "MSA-11-0031: Forms API constant issue",
@@ -9127,7 +9219,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5, < 1.9.14",
-        "link": "https://moodle.org/security/index.php?o=3&p=37#p819934"
+        "link": "https://moodle.org/security/index.php?o=3&p=38#p819934"
     },
     {
         "title": "MSA-11-0030: Box.net repository integration authentication issue",
@@ -9145,7 +9237,7 @@
             }
         ],
         "versions_affected": "< 2.1.2, < 2.0.5 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=37#p819933"
+        "link": "https://moodle.org/security/index.php?o=3&p=38#p819933"
     },
     {
         "title": "MSA-11-0029: File visibility issue",
@@ -9259,7 +9351,7 @@
             }
         ],
         "versions_affected": "< 2.0.4, < 2.1.1 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=38#p795582"
+        "link": "https://moodle.org/security/index.php?o=3&p=39#p795582"
     },
     {
         "title": "MSA-11-0022: Course creators could change filters at course level",
@@ -9277,7 +9369,7 @@
             }
         ],
         "versions_affected": "< 2.0.4, < 2.1.1 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=38#p795581"
+        "link": "https://moodle.org/security/index.php?o=3&p=39#p795581"
     },
     {
         "title": "MSA-11-0021: Role assignment web service function not following restrictions",
@@ -9295,7 +9387,7 @@
             }
         ],
         "versions_affected": "< 2.0.4, < 2.1.1 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=38#p795579"
+        "link": "https://moodle.org/security/index.php?o=3&p=39#p795579"
     },
     {
         "title": "MSA-11-0020: Continue links in error messages can lead offsite",
@@ -9317,7 +9409,7 @@
             }
         ],
         "versions_affected": "< 1.9.13, < 2.0.4, < 2.1.1",
-        "link": "https://moodle.org/security/index.php?o=3&p=38#p795577"
+        "link": "https://moodle.org/security/index.php?o=3&p=39#p795577"
     },
     {
         "title": "MSA-11-0019: Themes writing to files outside Moodle data directory",
@@ -9427,7 +9519,7 @@
             }
         ],
         "versions_affected": "< 1.9.12 and < 2.0.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=39#p770030"
+        "link": "https://moodle.org/security/index.php?o=3&p=40#p770030"
     },
     {
         "title": "MSA-11-0012: Authentication issue",
@@ -9441,7 +9533,7 @@
             }
         ],
         "versions_affected": "< 2.0.3 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=39#p770026"
+        "link": "https://moodle.org/security/index.php?o=3&p=40#p770026"
     },
     {
         "title": "MSA-11-0011: Multiple cross-site scripting problems in media filter",
@@ -9459,7 +9551,7 @@
             }
         ],
         "versions_affected": "<1.9.11 and <2.0.2",
-        "link": "https://moodle.org/security/index.php?o=3&p=39#p745725"
+        "link": "https://moodle.org/security/index.php?o=3&p=40#p745725"
     },
     {
         "title": "MSA-11-0010: Incorrect default for mod:course/delete capability in teacher role",
@@ -9473,7 +9565,7 @@
             }
         ],
         "versions_affected": "<2.0.2 (1.9.x not affected)",
-        "link": "https://moodle.org/security/index.php?o=3&p=39#p745723"
+        "link": "https://moodle.org/security/index.php?o=3&p=40#p745723"
     },
     {
         "title": "MSA-11-0009: My profile block may disclose private information if used in user context",
@@ -9579,7 +9671,7 @@
             }
         ],
         "versions_affected": "<1.9.11 and <2.0.2",
-        "link": "https://moodle.org/security/index.php?o=3&p=40#p745694"
+        "link": "https://moodle.org/security/index.php?o=3&p=41#p745694"
     },
     {
         "title": "MSA-11-0002: Cross-site request forgery vulnerability in RSS block",
@@ -9593,7 +9685,7 @@
             }
         ],
         "versions_affected": "<1.9.11 (2.0.x not vulnerable)",
-        "link": "https://moodle.org/security/index.php?o=3&p=40#p745692"
+        "link": "https://moodle.org/security/index.php?o=3&p=41#p745692"
     },
     {
         "title": "MSA-11-0001: Customised phpMyAdmin upgraded to 2.11.11.3 and 3.3.9.2",
@@ -9607,7 +9699,7 @@
             }
         ],
         "versions_affected": "all",
-        "link": "https://moodle.org/security/index.php?o=3&p=40#p742804"
+        "link": "https://moodle.org/security/index.php?o=3&p=41#p742804"
     },
     {
         "title": "MSA-10-0018: Customised phpMyAdmin upgraded to 2.11.11.1 and 3.3.8.1",
@@ -9621,7 +9713,7 @@
             }
         ],
         "versions_affected": "all",
-        "link": "https://moodle.org/security/index.php?o=3&p=40#p721540"
+        "link": "https://moodle.org/security/index.php?o=3&p=41#p721540"
     },
     {
         "title": "MSA-10-0017: XSS vulnerability in YUI 2.4.0 through YUI 2.8.1",
@@ -9735,7 +9827,7 @@
             }
         ],
         "versions_affected": "<1.8.13 and <1.9.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=41#p666478"
+        "link": "https://moodle.org/security/index.php?o=3&p=42#p666478"
     },
     {
         "title": "MSA-10-0010: Persistent Cross Site Scripting vulnerability in the MNET access control interface",
@@ -9753,7 +9845,7 @@
             }
         ],
         "versions_affected": "<1.8.13 and <1.9.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=41#p666476"
+        "link": "https://moodle.org/security/index.php?o=3&p=42#p666476"
     },
     {
         "title": "MSA-10-0009: Session fixation prevention now turned on by default",
@@ -9771,7 +9863,7 @@
             }
         ],
         "versions_affected": "1.8.x and <1.9.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=41#p642984"
+        "link": "https://moodle.org/security/index.php?o=3&p=42#p642984"
     },
     {
         "title": "MSA-10-0008: Persistent XSS when using Login-as feature",
@@ -9789,7 +9881,7 @@
             }
         ],
         "versions_affected": "<1.8.12 and <1.9.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=41#p642983"
+        "link": "https://moodle.org/security/index.php?o=3&p=42#p642983"
     },
     {
         "title": "MSA-10-0007: Reflective Cross Site Scripting (XSS) in the Moodle Global Search Engine",
@@ -9915,7 +10007,7 @@
             }
         ],
         "versions_affected": "<1.8.12 and <1.9.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=42#p642966"
+        "link": "https://moodle.org/security/index.php?o=3&p=43#p642966"
     },
     {
         "title": "MSA-09-0031: SQL injection in SCORM module",
@@ -9933,7 +10025,7 @@
             }
         ],
         "versions_affected": "<1.8.11 and <1.9.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=42#p606931"
+        "link": "https://moodle.org/security/index.php?o=3&p=43#p606931"
     },
     {
         "title": "MSA-09-0030: New detection of insecure flash player plugins",
@@ -9947,7 +10039,7 @@
             }
         ],
         "versions_affected": "<1.9.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=42#p606930"
+        "link": "https://moodle.org/security/index.php?o=3&p=43#p606930"
     },
     {
         "title": "MSA-09-0029: Multiple password related issues",
@@ -9965,7 +10057,7 @@
             }
         ],
         "versions_affected": "<1.8.11 and <1.9.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=42#p606897"
+        "link": "https://moodle.org/security/index.php?o=3&p=43#p606897"
     },
     {
         "title": "MSA-09-0028: Multiple backup/restore related issues ",
@@ -10091,7 +10183,7 @@
             }
         ],
         "versions_affected": "<1.8.11 and <1.9.7",
-        "link": "https://moodle.org/security/index.php?o=3&p=43#p606874"
+        "link": "https://moodle.org/security/index.php?o=3&p=44#p606874"
     },
     {
         "title": "MSA-09-0021: Error in ADODB OCI8/MSSQL drivers allows SQL injection vulnerability",
@@ -10105,7 +10197,7 @@
             }
         ],
         "versions_affected": "<1.9.6",
-        "link": "https://moodle.org/security/index.php?o=3&p=43#p597608"
+        "link": "https://moodle.org/security/index.php?o=3&p=44#p597608"
     },
     {
         "title": "MSA-09-0020: Teachers can view students' grades in all courses in the overview report",
@@ -10119,7 +10211,7 @@
             }
         ],
         "versions_affected": "<1.9.6",
-        "link": "https://moodle.org/security/index.php?o=3&p=43#p597604"
+        "link": "https://moodle.org/security/index.php?o=3&p=44#p597604"
     },
     {
         "title": "MSA-09-0019: SQL injection in update_record",
@@ -10141,7 +10233,7 @@
             }
         ],
         "versions_affected": "<1.9.6, <1.8.10, 1.7.x",
-        "link": "https://moodle.org/security/index.php?o=3&p=43#p597602"
+        "link": "https://moodle.org/security/index.php?o=3&p=44#p597602"
     },
     {
         "title": "MSA-09-0018: Incorrect escaping when updating first post in a single simple discussion forum type",
@@ -10243,7 +10335,7 @@
             }
         ],
         "versions_affected": "< 1.9.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=44#p542778"
+        "link": "https://moodle.org/security/index.php?o=3&p=45#p542778"
     },
     {
         "title": "MSA-09-0011: Glossary, database and forum ratings are not verified after submission",
@@ -10269,7 +10361,7 @@
             }
         ],
         "versions_affected": "< 1.9.5, < 1.8.9, 1.7.x, 1.6.x",
-        "link": "https://moodle.org/security/index.php?o=3&p=44#p542776"
+        "link": "https://moodle.org/security/index.php?o=3&p=45#p542776"
     },
     {
         "title": "MSA-09-0010: Unzip binary may create symbolic links pointing outside of dataroot on unix/linux servers",
@@ -10295,7 +10387,7 @@
             }
         ],
         "versions_affected": "< 1.9.5, < 1.8.9, 1.7.x, 1.6.x",
-        "link": "https://moodle.org/security/index.php?o=3&p=44#p542775"
+        "link": "https://moodle.org/security/index.php?o=3&p=45#p542775"
     },
     {
         "title": "MSA-09-0009: TeX filter file disclosure",
@@ -10321,7 +10413,7 @@
             }
         ],
         "versions_affected": "<= 1.9.4, <= 1.8.8, <= 1.7.7, <=1.6.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=44#p530853"
+        "link": "https://moodle.org/security/index.php?o=3&p=45#p530853"
     },
     {
         "title": "MSA-09-0008: CSRF vulnerability in forum code ",
@@ -10465,7 +10557,7 @@
             }
         ],
         "versions_affected": "< 1.9.4, < 1.8.8, < 1.7.7, < 1.6.9",
-        "link": "https://moodle.org/security/index.php?o=3&p=45#p506871"
+        "link": "https://moodle.org/security/index.php?o=3&p=46#p506871"
     },
     {
         "title": "MSA-09-0002: User pix disclosure ",
@@ -10483,7 +10575,7 @@
             }
         ],
         "versions_affected": "< 1.9.4, < 1.8.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=45#p506868"
+        "link": "https://moodle.org/security/index.php?o=3&p=46#p506868"
     },
     {
         "title": "MSA-09-0001: No way easy to remove pictures of deleted users ",
@@ -10501,7 +10593,7 @@
             }
         ],
         "versions_affected": "< 1.9.4, < 1.8.8",
-        "link": "https://moodle.org/security/index.php?o=3&p=45#p506865"
+        "link": "https://moodle.org/security/index.php?o=3&p=46#p506865"
     },
     {
         "title": "MSA-08-0028: customised PhpMyAdmin package upgraded to 2.11.9.4",
@@ -10515,7 +10607,7 @@
             }
         ],
         "versions_affected": "all",
-        "link": "https://moodle.org/security/index.php?o=3&p=45#p492563"
+        "link": "https://moodle.org/security/index.php?o=3&p=46#p492563"
     },
     {
         "title": "MSA-08-0027: customised PhpMyAdmin package upgraded to 2.11.9.3",
@@ -10669,7 +10761,7 @@
             }
         ],
         "versions_affected": "< 1.6.8, < 1.7.6, < 1.8.7, < 1.9.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=46#p477150"
+        "link": "https://moodle.org/security/index.php?o=3&p=47#p477150"
     },
     {
         "title": "MSA-08-0020: quiz/questions capabilities lack some risk flags in access.php files ",
@@ -10691,7 +10783,7 @@
             }
         ],
         "versions_affected": "< 1.7.6, < 1.8.7, < 1.9.3",
-        "link": "https://moodle.org/security/index.php?o=3&p=46#p477149"
+        "link": "https://moodle.org/security/index.php?o=3&p=47#p477149"
     },
     {
         "title": "MSA-08-0019: customised PhpMyAdmin package upgraded to 2.11.9.2",
@@ -10705,7 +10797,7 @@
             }
         ],
         "versions_affected": "all",
-        "link": "https://moodle.org/security/index.php?o=3&p=46#p477148"
+        "link": "https://moodle.org/security/index.php?o=3&p=47#p477148"
     },
     {
         "title": "MSA-08-0018: customised PhpMyAdmin package upgraded to 2.11.8.1",
@@ -10719,7 +10811,7 @@
             }
         ],
         "versions_affected": "all",
-        "link": "https://moodle.org/security/index.php?o=3&p=46#p451602"
+        "link": "https://moodle.org/security/index.php?o=3&p=47#p451602"
     },
     {
         "title": "MSA-08-0017: customised PhpMyAdmin upgraded to 2.11.7.1",
@@ -10845,7 +10937,7 @@
             }
         ],
         "versions_affected": "all version",
-        "link": "https://moodle.org/security/index.php?o=3&p=47#p447864"
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p447864"
     },
     {
         "title": " MSA-08-0010: sql injection in HotPot module",
@@ -10871,7 +10963,7 @@
             }
         ],
         "versions_affected": "<1.6.7, <1.7.5, <1.8.6, <1.9.2",
-        "link": "https://moodle.org/security/index.php?o=3&p=47#p447863"
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p447863"
     },
     {
         "title": "MSA-08-0009: Persistent Cross-site Scripting (XSS) on blog entry title parameter",
@@ -10889,7 +10981,7 @@
             }
         ],
         "versions_affected": "<1.6.7, <1.7.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=47#p447862"
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p447862"
     },
     {
         "title": "MSA-08-0008: KSES related issues",
@@ -10911,6 +11003,104 @@
             }
         ],
         "versions_affected": "<1.6.7, <1.7.5, <1.8.5",
-        "link": "https://moodle.org/security/index.php?o=3&p=47#p419591"
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p419591"
+    },
+    {
+        "title": "MSA-08-0007: imported phpMyAdmin 2.11.5.1",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.10.0"
+            }
+        ],
+        "versions_affected": "All previous versions (only if this module installed)",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p413800"
+    },
+    {
+        "title": "MSA-08-0006: Moodle cookie path can not be restricted",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.8.4"
+            }
+        ],
+        "versions_affected": "<1.8.4",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p390675"
+    },
+    {
+        "title": "MSA-08-0005: Bypassing restriction on multiple file uploads",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.7.99 "
+            }
+        ],
+        "versions_affected": "<1.7.x\r\n<1.8.4",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p390671"
+    },
+    {
+        "title": "MSA-08-0004: XSS in install.php before installation",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.6.6 "
+            }
+        ],
+        "versions_affected": "1.5.x \r\n<1.6.6\r\n<1.7.4\r\n<1.8.4",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p390259"
+    },
+    {
+        "title": "MSA-08-0003: Insufficient access control in Login as feature",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "1.8",
+                "to": "1.8.3"
+            }
+        ],
+        "versions_affected": "1.8-1.8.3",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p388730"
+    },
+    {
+        "title": "MSA-08-0001: Access elevation in user edit form",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.6.6"
+            }
+        ],
+        "versions_affected": "1.5.x <1.6.6<1.7.3",
+        "link": "https://moodle.org/security/index.php?o=3&p=48#p388729"
+    },
+    {
+        "title": "MSA-08-0002: register_globals=on not supported",
+        "cves": [
+            "N/A"
+        ],
+        "versions": [
+            {
+                "from": "0.0.0",
+                "to": "1.10.0"
+            }
+        ],
+        "versions_affected": "all past and future versions",
+        "link": "https://moodle.org/security/index.php?o=3&p=49#p388726"
     }
 ]
