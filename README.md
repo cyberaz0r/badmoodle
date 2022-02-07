@@ -101,9 +101,17 @@ Using badmoodle is also very simple. Once installed you can run it with the foll
 
   Scraping mode: scrape all the pages from moodle and save the result in a JSON file (default: disabled)
 
+* `-o OUTFILE`, `--outfile OUTFILE`
+
+  Save scan results to a JSON file
+
+* `-m`, `--list-modules`
+
+  Option to list all the community vulnerability modules and check which ones are enabled
+
 * `-U`, `--update`
 
-  Update badmoodle vulnerability database by scraping Moodle security advisory blog and retrieving new modules from GitHub repository
+  Update badmoodle official vulnerability database by scraping Moodle security blog, update plugin and themes list by using Moodle API and retrieve new community modules from GitHub repository
 
 
 ## Community Vulnerability Modules
