@@ -170,9 +170,14 @@ def update_vulnerability_database(verbosity):
 			except AttributeError:
 				continue
 			
+			# print(trs)
 			# extract all vulnerabilities info from articles
 			title = advisory.find('h3', class_='h4').get_text()
 			cves = parse_cves(trs)
+			try:
+				severity = get_element_table(trs, 'severity/risk').strip()
+			except IndexError:
+				severity = get_element_table(trs, 'severity').strip()
 			versions_affected = get_element_table(trs, 'versions affected').strip()
 			versions = parse_versions(versions_affected)
 			advisory_link = url.format(i) + '#' + advisory['id']
@@ -181,6 +186,7 @@ def update_vulnerability_database(verbosity):
 			vulnerability_database.append(
 				{
 					'title' : title,
+					'severity': severity,
 					'cves' : cves,
 					'versions' : versions,
 					'versions_affected' : versions_affected,

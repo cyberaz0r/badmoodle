@@ -155,6 +155,7 @@ def check_official_vulnerabilities(version):
 		print(
 			color.BOLD + vuln['title'] + color.END + '\n' +
 			color.UNDERLINE + 'CVEs:' + color.END + ' ' + ', '.join(vuln['cves']) + '\n' +
+			color.UNDERLINE + 'Severity:' + color.END + ' ' + vuln['severity'] + '\n' +
 			color.UNDERLINE + 'Versions affected:' + color.END + ' ' + vuln['versions_affected'] + '\n' +
 			color.UNDERLINE + 'Link to advisory:' + color.END + ' ' + vuln['link'],
 		)
