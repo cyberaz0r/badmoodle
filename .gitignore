@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data files that have to be downloaded on use
+data/vulndb.json
+data/plugins.json

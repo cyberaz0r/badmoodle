@@ -144,8 +144,15 @@ def enumerate_plugins(verbosity, url, sess):
 
 def check_official_vulnerabilities(version):
 	print_status('Checking for official vulnerabilities from vulnerability database', True)
-	vulnerabilities_found = list_vulnerabilities(version[1:].split('-')[0])
 	
+	try:
+		vulnerabilities_found = list_vulnerabilities(version[1:].split('-')[0])
+	except FileNotFoundError as e:
+		print_error('Please run "badmoodle.py -U" to fetch the vulnerability database')
+		print_info('Details of the error are reported in "{}"'.format(exception_logfile(e)))
+		print_error('Terminating badmoodle due to errors')
+		exit(1)
+
 	if not vulnerabilities_found:
 		print_warning('No official vulnerabilities have been found in the scanned host')
 		return False
