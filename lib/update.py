@@ -171,7 +171,7 @@ def update_vulnerability_database(verbosity):
 				continue
 			
 			# extract all vulnerabilities info from articles
-			title = advisory.find('h3', class_='h4').get_text()
+			title = advisory.find('h3', class_='h6').get_text()
 			cves = parse_cves(trs)
 			versions_affected = get_element_table(trs, 'versions affected').strip()
 			versions = parse_versions(versions_affected)

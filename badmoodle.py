@@ -34,7 +34,7 @@ def update(verbosity):
 		if 'JSON_ENTRIES_LESS_THAN_BEFORE' in repr(e):
 			print(color.RED + 'The number of entries in current vulnerability database is less than the previous one\n(maybe some vulnerabilities were removed or there were parsing errors...)' + color.END)
 		else:
-			print_info('Details of the error are reported in "{}"'.format(exception_logfile()))
+			print_info('Details of the error are reported in "{}"'.format(exception_logfile(e)))
 		
 		print_error('Terminating badmoodle due to errors', True)
 		exit(1)
